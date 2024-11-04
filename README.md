@@ -5,6 +5,7 @@ This project provides Dockerfiles for running Meta's AudioCraft (MusicGen) with 
 ## 📺 Resources & Documentation
 
 - [Tutorial Blog Post](https://minokamo.tokyo/2023/10/08/6321/)
+- [Tutorial Blog Post English](https://betelgeuse.work/archives/6321)
 - [Video Guide on YouTube](https://youtu.be/r13qBmuFtRM)
 
 ## 🌟 Features
