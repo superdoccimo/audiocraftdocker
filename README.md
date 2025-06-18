@@ -32,7 +32,7 @@ Then open your browser and navigate to `http://localhost:7860`
 
 ### CUDA 12.4
 - Latest CUDA support
-- Uses PyTorch 2.4.0
+- Uses PyTorch 2.5.1
 - Optimized for newer NVIDIA GPUs
 - [Dockerfile.cuda124](./Dockerfile.cuda124)
 
