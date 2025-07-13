@@ -1,6 +1,6 @@
 # AudioCraft Docker with CUDA Support
 
-This project provides Dockerfiles for running Meta's AudioCraft (MusicGen) with different CUDA versions (12.9, 12.4, and 12.1). This repository was developed through collaboration with Claude 3.5 Sonnet (Anthropic) to extend the original CUDA 11.8 implementation, which was independently created by the repository owner.
+This project provides Dockerfiles for running Meta's AudioCraft (MusicGen) with different CUDA versions (12.9, 12.8, 12.4, and 12.1). This repository was developed through collaboration with Claude 3.5 Sonnet (Anthropic) to extend the original CUDA 11.8 implementation, which was independently created by the repository owner.
 
 ## 📺 Resources & Documentation
 
@@ -10,7 +10,7 @@ This project provides Dockerfiles for running Meta's AudioCraft (MusicGen) with 
 
 ## 🌟 Features
 
-- Support for latest CUDA versions (12.9, 12.4, 12.1)
+- Support for latest CUDA versions (12.9, 12.8, 12.4, 12.1)
 - Optimized dependency management
 - Ready-to-use Docker configurations
 - Gradio web interface for easy interaction
@@ -32,9 +32,15 @@ Then open your browser and navigate to `http://localhost:7860`
 
 ### CUDA 12.9
 - Latest CUDA support
-- Uses PyTorch 2.5.1
+- Uses PyTorch 2.9.0 nightly builds (development version)
 - Optimized for newest NVIDIA GPUs
 - [Dockerfile.cuda129](./Dockerfile.cuda129)
+
+### CUDA 12.8
+- Latest stable CUDA support
+- Uses PyTorch 2.7.0 stable
+- Recommended for production use
+- [Dockerfile.cuda128](./Dockerfile.cuda128)
 
 ### CUDA 12.4
 - Latest CUDA support
