@@ -25,7 +25,6 @@ ENV VIRTUAL_ENV=/opt/venv
 RUN python -m venv $VIRTUAL_ENV
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
-ENV SETUPTOOLS_USE_DISTUTILS=stdlib
 
 RUN pip install --no-cache-dir "wheel>=0.38.4"
 RUN pip install --no-cache-dir "setuptools>=66.0.0"
@@ -39,8 +38,6 @@ RUN pip install --no-cache-dir \
     torchvision==0.22.0+cu128 \
     torchaudio==2.7.0+cu128 \
     --index-url https://download.pytorch.org/whl/cu128
-
-RUN pip install --no-cache-dir "torchtext==0.18.0"
 
 RUN pip install --no-cache-dir "transformers==4.47.0"
 
