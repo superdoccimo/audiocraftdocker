@@ -1,4 +1,4 @@
-FROM python:3.9-slim-bookworm
+FROM python:3.11-slim-bookworm
 
 RUN apt-get update && \
     apt-get install -y \
@@ -23,14 +23,12 @@ ENV VIRTUAL_ENV=/opt/venv
 RUN python -m venv $VIRTUAL_ENV
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
-ENV SETUPTOOLS_USE_DISTUTILS=stdlib
-
 RUN pip install --no-cache-dir "wheel>=0.38.4"
 RUN pip install --no-cache-dir "setuptools>=66.0.0"
 RUN pip install --no-cache-dir "cython>=0.29.33"
 RUN pip install --no-cache-dir "pybind11>=2.10.3"
 
-RUN pip install --no-cache-dir "numpy==1.23.5"
+RUN pip install --no-cache-dir "numpy>=1.23.5,<2"
 
 RUN pip install --no-cache-dir \
         torch==2.1.0+cu121 \
