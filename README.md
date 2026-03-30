@@ -30,10 +30,11 @@ Then open your browser and navigate to `http://localhost:7860`
 
 ## 📦 Supported Versions
 
-### CUDA 13.2
-- Latest CUDA support
-- Uses PyTorch 2.10.0 nightly builds (development version)
+### CUDA 13.2 (Experimental - Untested)
+- **WARNING: This Dockerfile has NOT been build-tested. It may fail due to dependency conflicts (xformers, torchtext, gradio compatibility with PyTorch nightly).**
+- Uses PyTorch nightly builds for CUDA 13.2
 - Optimized for newest NVIDIA GPUs
+- Contributions and test reports welcome
 - [Dockerfile.cuda132](./Dockerfile.cuda132)
 
 ### CUDA 12.9
