@@ -30,11 +30,10 @@ Then open your browser and navigate to `http://localhost:7860`
 
 ## 📦 Supported Versions
 
-### CUDA 13.2 (Experimental - Untested)
-- **WARNING: This Dockerfile has NOT been build-tested. It may fail due to dependency conflicts (xformers, torchtext, gradio compatibility with PyTorch nightly).**
+### CUDA 13.2
 - Uses PyTorch nightly builds for CUDA 13.2
 - Optimized for newest NVIDIA GPUs
-- Contributions and test reports welcome
+- CI-verified (build + basic import test)
 - [Dockerfile.cuda132](./Dockerfile.cuda132)
 
 ### CUDA 12.9
@@ -114,7 +113,7 @@ The project addresses several technical challenges:
 ## 📚 Dependencies
 
 Core components:
-- Python 3.9
+- Python 3.11+ (varies by CUDA version)
 - PyTorch (version varies by CUDA)
 - AudioCraft (Meta's MusicGen)
 - Various audio processing libraries
