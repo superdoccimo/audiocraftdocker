@@ -1,0 +1,28 @@
+name: Docker Build Test
+
+on:
+  push:
+    paths:
+      - 'Dockerfile.*'
+      - '.github/workflows/docker-build-test.yml'
+  pull_request:
+    paths:
+      - 'Dockerfile.*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        cuda: [121, 124, 128, 129, 132]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build Dockerfile.cuda${{ matrix.cuda }}
+        run: |
+          docker build -f Dockerfile.cuda${{ matrix.cuda }} -t audiocraft:cuda${{ matrix.cuda }} .
+
+      - name: Test basic import (CPU mode)
+        run: |
+          docker run --rm audiocraft:cuda${{ matrix.cuda }} python -c "import audiocraft; print('audiocraft import OK')"
