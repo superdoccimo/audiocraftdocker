@@ -17,7 +17,7 @@ jobs:
       matrix:
         cuda: [121, 124, 128, 129, 132]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Build Dockerfile.cuda${{ matrix.cuda }}
         run: |
